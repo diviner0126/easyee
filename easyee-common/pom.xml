@@ -15,17 +15,23 @@
   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
   KIND, either express or implied.  See the License for the
   specific language governing permissions and limitations
-  und
+  under the License.
 -->
-<!-- $Id: block-servlet-service.xml 642117 2008-03-28 08:03:19Z reinhard $ -->
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:servlet="http://cocoon.apache.org/schema/servlet"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-                           http://cocoon.apache.org/schema/servlet http://cocoon.apache.org/schema/servlet/cocoon-servlet-1.0.xsd">
+<!-- $Id: pom.xml 643595 2008-04-01 21:40:49Z reinhard $ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>easyee</artifactId>
+        <groupId>com.diviner</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-  <bean name="com.diviner.easyee-models.service" class="org.apache.cocoon.sitemap.SitemapServlet">
-    <servlet:context mount-path="/easyee-models" context-path="blockcontext:/easyee-models/"/>
-  </bean>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>easyee-common</artifactId>
+    <packaging>jar</packaging>
+    <name>easyee-common</name>
+    <description>公共的配置工具</description>
 
-</beans>
+    <dependencies></dependencies>
+
+</project>

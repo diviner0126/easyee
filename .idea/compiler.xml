@@ -8,10 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="easyee-admin" />
         <module name="easyee-api" />
-        <module name="easyee-commen" />
+        <module name="easyee-common" />
         <module name="easyee-generator" />
         <module name="easyee-models" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="easyee-commen" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

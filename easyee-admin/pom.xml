@@ -17,6 +17,20 @@
     </properties>
 
     <dependencies>
+        <!-- 引入 models 层 -->
+        <dependency>
+            <groupId>com.diviner</groupId>
+            <artifactId>easyee-models</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- 引入公共项目 -->
+        <dependency>
+            <groupId>com.diviner</groupId>
+            <artifactId>easyee-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -37,6 +51,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>

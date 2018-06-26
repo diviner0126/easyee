@@ -20,7 +20,7 @@
     <modules>
         <module>easyee-admin</module>
         <module>easyee-api</module>
-        <module>easyee-commen</module>
+        <module>easyee-common</module>
         <module>easyee-models</module>
         <module>easyee-generator</module>
     </modules>
@@ -69,7 +69,16 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.45</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.diviner</groupId>
+                <artifactId>easyee-models</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.diviner</groupId>
+                <artifactId>easyee-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
