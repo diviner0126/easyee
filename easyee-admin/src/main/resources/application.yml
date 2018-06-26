@@ -1,0 +1,19 @@
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 8080
+    servlet:
+      context-path: /admin
+
+spring:
+    # 环境 dev|prod
+    profiles:
+        active: dev
+logging:
+  level: debug
+  level.io.ft: debug
+  path: logs/
+  file: admin.log
