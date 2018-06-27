@@ -9,6 +9,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>easyee-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>easyee-api</name>
     <description>接口项目</description>
@@ -17,6 +18,12 @@
     </properties>
 
     <dependencies>
+        <!-- 引入 models 层 -->
+        <dependency>
+            <groupId>com.diviner</groupId>
+            <artifactId>easyee-models</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>

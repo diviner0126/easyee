@@ -12,6 +12,7 @@ spring:
     # 环境 dev|prod
     profiles:
         active: dev
+
 logging:
   level: debug
   level.io.ft: debug
