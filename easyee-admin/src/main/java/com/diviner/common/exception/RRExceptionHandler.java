@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @RestControllerAdvice
 public class RRExceptionHandler {
-	private Log logger = LogFactory.getLog(getClass());
+	private Log log = LogFactory.getLog(getClass());
 
 	/**
 	 * 处理自定义异常
@@ -46,13 +46,13 @@ public class RRExceptionHandler {
 
 	@ExceptionHandler(AuthorizationException.class)
 	public R handleAuthorizationException(AuthorizationException e){
-		logger.error(e.getMessage(), e);
+		log.error(e.getMessage(), e);
 		return R.error("没有权限，请联系管理员授权");
 	}
 
 	@ExceptionHandler(Exception.class)
 	public R handleException(Exception e){
-		logger.error(e.getMessage(), e);
+		log.error(e.getMessage(), e);
 		return R.error("服务异常");
 	}
 }
