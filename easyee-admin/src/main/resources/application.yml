@@ -12,6 +12,14 @@ spring:
     # 环境 dev|prod
     profiles:
         active: dev
+mybatis:
+  typeAliasesPackage: com.diviner.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    jdbc-type-for-null: 'null'
+    mapUnderscoreToCamelCase: true
+
+
 logging:
   level: debug
   level.io.ft: debug
