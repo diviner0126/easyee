@@ -23,7 +23,7 @@ public class LoginController {
     }
 
     @RequestMapping("test1")
-    public R test1() {
-        return R.ok().put("data", userService.getUserAll1());
+    public R test1(long id) {
+        return R.ok().put("data", userService.selectById(id));
     }
 }

@@ -1,6 +1,10 @@
 package com.diviner.entity;
 
-public class SysUser {
+import com.baomidou.mybatisplus.activerecord.Model;
+
+import java.io.Serializable;
+
+public class SysUser extends Model<SysUser> {
     private Long userId;
     private String username;
     private String password;
@@ -26,5 +30,10 @@ public class SysUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    protected Serializable pkVal() {
+        return null;
     }
 }
