@@ -1,6 +1,5 @@
 package com.diviner.modules.user.service.impl;
 
-import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.diviner.entity.SysUser;
 import com.diviner.modules.user.dao.UserDao;
@@ -8,7 +7,6 @@ import com.diviner.modules.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Wrapper;
 import java.util.List;
 import java.util.Map;
 
@@ -31,14 +29,9 @@ public class UserServiceImpl extends ServiceImpl<UserDao,SysUser> implements Use
 
     @Override
     public SysUser selectById(Long id) {
-        new SysUser();
-        this.selectObj(new com.baomidou.mybatisplus.mapper.Wrapper<SysUser>() {
-            @Override
-            public String getSqlSegment() {
-                return null;
-            }
-        })
-        SysUser sysUser = new SysUser().selectById();
+        SysUser sysUser = new SysUser();
+        sysUser.setUserId(12L);sysUser.setUsername("234234");
+        userDao.insert(sysUser);
         return  sysUser;
     }
 }

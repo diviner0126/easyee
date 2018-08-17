@@ -1,9 +1,10 @@
 package com.diviner.modules.sys;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.SystemUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,11 @@ public class PageController {
     public String module(HttpServletRequest request){
         String contextPath = request.getContextPath();
         String requestURI = request.getRequestURI();
-        requestURI = requestURI.replace(contextPath+"/","");
+        if(StringUtils.isNotBlank(contextPath)){
+            requestURI = requestURI.replace(contextPath,"/modules");
+        }else{
+            requestURI += "/modules" + requestURI;
+        }
         return requestURI;
     }
 
