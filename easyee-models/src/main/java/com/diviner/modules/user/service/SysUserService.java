@@ -6,7 +6,7 @@ import com.diviner.entity.SysUser;
 import java.util.List;
 import java.util.Map;
 
-public interface UserService extends IService<SysUser> {
+public interface SysUserService extends IService<SysUser> {
 
     List<SysUser> getUserAll();
 

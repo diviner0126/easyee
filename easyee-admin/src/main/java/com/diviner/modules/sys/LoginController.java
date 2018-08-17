@@ -1,7 +1,7 @@
 package com.diviner.modules.sys;
 
 import com.diviner.common.R;
-import com.diviner.modules.user.service.UserService;
+import com.diviner.modules.user.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @Autowired
-    private UserService userService;
+    private SysUserService userService;
 
     @RequestMapping("login")
     public R login() {
