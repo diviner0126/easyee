@@ -1,5 +1,7 @@
 package com.diviner.modules.sys;
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.baomidou.mybatisplus.plugins.pagination.PageHelper;
 import com.diviner.common.R;
 import com.diviner.entity.SysUserEntity;
 import com.diviner.modules.user.service.SysUserService;
@@ -20,8 +22,10 @@ public class LoginController {
 
     @RequestMapping("test")
     public R test() {
-        SysUserEntity sysUser = sysUserService.selectById(1);
-        return R.ok().put("data", sysUser);
+        SysUserEntity sysUserEntity1 = new SysUserEntity();
+       // PageHelper.startPage(0,1);
+        Page<SysUserEntity> sysUserEntityPage = new Page<>();
+        return R.ok().put("data", sysUserService.selectPage(sysUserEntityPage));
     }
 
     @RequestMapping("test1")

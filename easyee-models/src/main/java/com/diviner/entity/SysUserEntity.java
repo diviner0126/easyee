@@ -68,11 +68,6 @@ public class SysUserEntity extends Model<SysUserEntity> {
 	 * 状态  0：禁用   1：正常
 	 */
 	private Integer status;
-	
-	/**
-	 * 角色ID列表
-	 */
-	private List<Long> roleIdList;
 
 	/**
 	 * 创建时间
@@ -83,11 +78,6 @@ public class SysUserEntity extends Model<SysUserEntity> {
 	 * 部门ID
 	 */
 	private Long deptId;
-
-	/**
-	 * 部门名称
-	 */
-	private String deptName;
 
 	/**
 	 * 设置：
@@ -201,13 +191,6 @@ public class SysUserEntity extends Model<SysUserEntity> {
 		return createTime;
 	}
 
-	public List<Long> getRoleIdList() {
-		return roleIdList;
-	}
-
-	public void setRoleIdList(List<Long> roleIdList) {
-		this.roleIdList = roleIdList;
-	}
 
 	public String getSalt() {
 		return salt;
@@ -225,13 +208,6 @@ public class SysUserEntity extends Model<SysUserEntity> {
 		this.deptId = deptId;
 	}
 
-	public String getDeptName() {
-		return deptName;
-	}
-
-	public void setDeptName(String deptName) {
-		this.deptName = deptName;
-	}
 
 	@Override
 	protected Serializable pkVal() {
