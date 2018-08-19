@@ -42,7 +42,6 @@ mybatis-plus:
     cache-enabled: false
     jdbc-type-for-null: 'null'
 
-
 logging:
   level: debug
   level.io.ft: debug

@@ -1,15 +1,15 @@
 package com.diviner.modules.user.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.diviner.entity.SysUser;
+import com.diviner.entity.SysUserEntity;
 
 import java.util.List;
 import java.util.Map;
 
-public interface SysUserService extends IService<SysUser> {
+public interface SysUserService extends IService<SysUserEntity> {
 
-    List<SysUser> getUserAll();
+    List<SysUserEntity> getUserAll();
 
     List<Map<String,Object>> getUserAll1();
-    SysUser selectById(Long id);
+    Object selectById(Long id);
 }

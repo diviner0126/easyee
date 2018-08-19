@@ -1,7 +1,7 @@
 package com.diviner.modules.user.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.diviner.entity.SysUser;
+import com.diviner.entity.SysUserEntity;
 import com.diviner.modules.user.dao.SysUserDao;
 import com.diviner.modules.user.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,27 +11,25 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class SysUserServiceImpl extends ServiceImpl<SysUserDao,SysUser> implements SysUserService {
+public class SysUserServiceImpl extends ServiceImpl<SysUserDao,SysUserEntity> implements SysUserService {
 
     @Autowired
-    private SysUserDao userDao;
+    private SysUserDao sysUserDao;
 
     @Override
-    public List<SysUser> getUserAll() {
+    public List<SysUserEntity> getUserAll() {
 
-        return userDao.getUserAll();
+        return sysUserDao.getUserAll();
     }
 
     @Override
     public List<Map<String, Object>> getUserAll1() {
-        return userDao.getUserAll1();
+        return sysUserDao.getUserAll1();
     }
 
     @Override
-    public SysUser selectById(Long id) {
-        SysUser sysUser = new SysUser();
-        sysUser.setUserId(12L);sysUser.setUsername("234234");
-        userDao.insert(sysUser);
-        return  sysUser;
+    public Object selectById(Long id) {
+
+        return  sysUserDao.getUserAll1();
     }
 }
